@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  font-size: 0.75rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(to bottom, hsl(273deg, 100%, 68%) 10%, hsl(273deg, 75%, 66%) 20%, hsl(240deg, 73%, 65%));
+}
+
+.accordion__card {
+  width: 330px;
+  border-radius: 2rem;
+  padding: 0 2rem 3rem;
+  box-sizing: border-box;
+  background: url(../assets/images/bg-pattern-mobile.svg) center top/80% no-repeat white;
+}
+@media (min-width: 760px) {
+  .accordion__card {
+    background: url(../assets/images/bg-pattern-desktop.svg) -500% 70%/90% no-repeat white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60vw;
+    overflow: hidden;
+    padding: 3rem 5rem;
+  }
+}
+@media (min-width: 760px) {
+  .accordion__img {
+    display: flex;
+    justify-content: center;
+  }
+}
+.accordion__box {
+  display: none;
+}
+@media (min-width: 760px) {
+  .accordion__box {
+    height: min-content;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+  }
+}
+.accordion picture {
+  display: flex;
+  justify-content: center;
+}
+.accordion__illustration {
+  margin-top: -40%;
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+@media (min-width: 760px) {
+  .accordion__illustration {
+    width: 100%;
+    margin-top: unset;
+    margin-block: auto;
+    margin-left: -20%;
+  }
+}
+.accordion__faq {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 760px) {
+  .accordion__faq {
+    text-align: left;
+  }
+}
+.accordion__title, .accordion__content {
+  color: hsl(237deg, 12%, 33%);
+}
+.accordion__title {
+  font-size: 1.1rem;
+  margin-right: auto;
+  display: flex;
+  transition: 0.5s;
+}
+.accordion__title::after {
+  content: url(../assets/images/icon-arrow-down.svg);
+  display: inline;
+  margin-left: auto;
+  transition: 0.5s;
+}
+.accordion__title:hover, .accordion__title:focus {
+  color: hsl(0deg, 62%, 45%);
+}
+.accordion__content {
+  height: 0px;
+  line-height: 1.5;
+  overflow: hidden;
+  padding-right: 1.5rem;
+  transition: 0.5s;
+}
+.accordion__divider {
+  height: 2px;
+  background: hsl(240deg, 5%, 91%);
+  border: none;
+}
+.accordion__item:hover, .accordion__item:focus {
+  cursor: pointer;
+}
+.accordion__item--expand .accordion__title {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+  transition: 0.5s;
+}
+.accordion__item--expand .accordion__title:hover, .accordion__item--expand .accordion__title:focus {
+  color: hsl(0deg, 62%, 45%);
+}
+.accordion__item--expand .accordion__title::after {
+  transform: rotate(180deg);
+}
+.accordion__item--expand .accordion__content {
+  height: 100%;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css">
+
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+</head>
+<body>
+
+  <main class="accordion">
+    <div class="accordion__card">
+      <!-- SVG -->
+      <div class="accordion__img">
+        <img srcset="./assets/images/illustration-box-desktop.svg" alt="Illustration"  class="accordion__box"
+            media="(min-width: 760px)">
+        <picture>
+          <!-- <source srcset="./assets/images/illustration-box-desktop.svg"
+                  type=""
+                  media="(min-width: 760px)"> -->
+          <source srcset="./assets/images/illustration-woman-online-desktop.svg"
+                  type=""
+                  media="(min-width: 760px)">
+          <img src="./assets/images/illustration-woman-online-mobile.svg" alt="Illustration"  class="accordion__illustration">
+        </picture>
+      </div>
+      <article>
+        <h1 class="accordion__faq">
+          FAQ
+        </h1>
+        <div class="accordion__item accordion__item--expand">
+          <p class="accordion__title">How many team members can I invite?</p>
+          <p class="accordion__content  ">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+          <hr class="accordion__divider">
+        </div>
+        <div class="accordion__item">
+          <p class="accordion__title">What is the maximum file upload size?</p>
+          <p class="accordion__content  ">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          <hr class="accordion__divider">
+        </div>
+        <div class="accordion__item">
+          <p class="accordion__title">How do I reset my password?</p>
+          <p class="accordion__content  ">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+          <hr class="accordion__divider">
+        </div>
+        <div class="accordion__item">
+          <p class="accordion__title">Can I cancel my subscription?</p>
+          <p class="accordion__content  ">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          <hr class="accordion__divider">
+        </div>
+        <div class="accordion__item">
+          <p class="accordion__title">Do you provide additional support?</p>
+          <p class="accordion__content">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </div>
+        <hr class="accordion__divider">
+      </article>
+    </div>
+  </main>
+
+
+</body>
+<script src="./js/app.js"></script>
+</html>
